@@ -2,6 +2,7 @@
 "github:Barocena/ROpen" = "0.0.1"
 "github:JohnnyMorganz/StyLua" = "2.4.0"
 "github:JohnnyMorganz/luau-lsp" = "1.63.0"
+"github:abhixdd/ghgrab" = "1.2.0"
 "github:jackTabsCode/asphalt" = "1.2.0"
 "github:luau-lang/luau" = "0.713"
 "github:lune-org/lune" = "0.10.4"
