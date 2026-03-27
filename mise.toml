@@ -1,0 +1,38 @@
+[tools]
+"github:Barocena/ROpen" = "0.0.1"
+"github:JohnnyMorganz/StyLua" = "2.4.0"
+"github:JohnnyMorganz/luau-lsp" = "1.63.0"
+"github:jackTabsCode/asphalt" = "1.2.0"
+"github:luau-lang/luau" = "0.713"
+"github:lune-org/lune" = "0.10.4"
+"github:pesde-pkg/pesde" = "0.7.3"
+"github:rojo-rbx/rojo" = "7.6.1"
+prettier = "3.8.0"
+
+[settings]
+jobs = 8
+
+[tasks."setup"]
+run = ["mise i", "pesde install", "npm install"]
+
+[tasks.tests]
+run = "pesde x ernisto/test -- tests"
+
+[tasks."format"]
+run = "stylua src/"
+
+[tasks."dev:sourcemap"]
+run = "rojo sourcemap -o sourcemap.json --watch"
+
+[tasks."dev:syncer"]
+run = "rojo serve"
+
+[tasks."dev:open_experimental_place"]
+confirm = "Open experimental place ?"
+run = "ropen meow/meow || true"
+
+[tasks."dev:core"]
+depends = ["dev:sourcemap", "dev:syncer"]
+
+[tasks."dev"]
+run = ["mise r dev:open_experimental_place || true", "mise r dev:core"]

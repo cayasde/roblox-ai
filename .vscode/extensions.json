@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "johnnymorganz.luau-lsp",
+        "hverlin.mise-vscode",
+        "johnnymorganz.stylua",
+        "tamasfe.even-better-toml",
+        "adrianwilczynski.toggle-hidden",
+        "esbenp.prettier-vscode"
+    ]
+}

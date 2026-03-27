@@ -1,0 +1,35 @@
+{
+    "name": "rrboilerplate",
+    "emitLegacyScripts": false,
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedFirst": {
+            "$path": "src/ReplicatedFirst"
+        },
+        "ReplicatedStorage": {
+            "client": {
+                "$path": "src/StarterPlayerScripts"
+            },
+            "libs": {
+                "$path": "libs"
+            },
+            "stories": {
+                "$path": "stories"
+            },
+            "pkg": {
+                "$path": "roblox_packages"
+            },
+            "assets": {
+                "$className": "Folder",
+                "$ignoreUnknownInstances": true
+            },
+            "$path": "src/ReplicatedStorage"
+        },
+        "ServerScriptService": {
+            "$path": "src/ServerScriptService",
+            "serverpkg": {
+                "$path": "roblox_server_packages"
+            }
+        }
+    }
+}

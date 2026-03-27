@@ -1,0 +1,11 @@
+*.rbxlx
+*.rbxl
+/*.rbxlx.lock
+/*.rbxl.lock
+sourcemap.json
+.pesde
+*_packages
+.env
+**/net**
+**/assets.luau
+node_modules
