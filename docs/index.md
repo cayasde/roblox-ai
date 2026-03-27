@@ -1,6 +1,7 @@
 # Documentation index
 
 This folder contains curated, modular docs intended for fast lookup and selective loading.
+Use this page as the first stop before diving into topic-specific documentation.
 
 ## Topics
 
