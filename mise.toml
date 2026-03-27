@@ -37,3 +37,28 @@ depends = ["dev:sourcemap", "dev:syncer"]
 
 [tasks."dev"]
 run = ["mise r dev:open_experimental_place || true", "mise r dev:core"]
+
+[tasks."ensure_roblox_defs"]
+sources = ["scripts/ensure_roblox_defs.luau"]
+outputs = ["globalTypes.d.luau", "vectorTypes.d.luau"]
+run = "lune run scripts/ensure_roblox_defs.luau"
+
+[tasks."gen:sourcemap"]
+sources = [
+    "default.project.json",
+    "src/**",
+    "stories/**",
+    "tests/**",
+    "libs/**",
+    "roblox_packages/**",
+    "roblox_server_packages/**",
+]
+outputs = ["sourcemap.json"]
+run = "rojo sourcemap -o sourcemap.json"
+
+[tasks."lint"]
+depends = ["ensure_roblox_defs", "gen:sourcemap"]
+run = """luau-lsp analyze --platform roblox --sourcemap sourcemap.json --ignore=**/roblox_packages/** --ignore=**/roblox_server_packages/** --ignore=**/luau_packages/** --ignore=**/lune_packages/** --ignore=**/node_modules/** --ignore=**/dist/** --ignore=**/*_packages/** --defs globalTypes.d.luau --defs vectorTypes.d.luau src stories tests libs"""
+
+[tasks."check"]
+depends = ["lint", "tests"]
