@@ -13,6 +13,12 @@
             "libs": {
                 "$path": "libs"
             },
+            "netclient": {
+                "$path": "remotes/netclient.luau"
+            },
+            "nettypes": {
+                "$path": "remotes/nettypes.luau"
+            },
             "stories": {
                 "$path": "stories"
             },
@@ -27,6 +33,9 @@
         },
         "ServerScriptService": {
             "$path": "src/ServerScriptService",
+            "netserver": {
+                "$path": "remotes/netserver.luau"
+            },
             "serverpkg": {
                 "$path": "roblox_server_packages"
             }
