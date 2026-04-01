@@ -1,6 +1,7 @@
 [tools]
 "github:1Axen/blink" = "0.18.6"
 "github:Barocena/ROpen" = "0.0.1"
+"github:cli/cli" = "2.89.0"
 "github:JohnnyMorganz/StyLua" = "2.4.0"
 "github:JohnnyMorganz/luau-lsp" = "1.64.0"
 "github:abhixdd/ghgrab" = "1.2.0"
@@ -14,6 +15,9 @@ python = "3.14.3"
 
 [settings]
 jobs = 8
+
+[settings.github]
+github_attestations = false
 
 [tasks."setup"]
 run = ["mise i", "pesde install", "npm install", "blink remotes/.blink"]
